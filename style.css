@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Nunito&family=Poppins:wght@300&family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100%;
+    width: 100%;
+    background: #68eacc ;
+}
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 50%;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 25px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+.wrapper header{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.wrapper .input-field{
+    display: flex;
+    align-items: center;
+    height: 45px;
+    width: 100%;
+    margin: 10px 0;
+}
+.wrapper .input-field input{
+    width: 90%;
+    height: 100%;
+    border:  1px solid #ccc;
+    color: #555;
+    font-size: 16px;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+.wrapper .input-field button{
+    width: 55px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: #8e49e8;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    margin-left: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+    pointer-events: none;
+}
+.wrapper .input-field button i{
+    font-size: 26px;
+    line-height: 45px;
+    font-weight: 600;
+}
+.input-field button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.todolist h3{
+    font-size: 20px;
+    margin: 10px 0;
+    color: #8e49e8;
+}
+.todolist ul{
+
+}
+.wrapper .pending ul{
+    max-height: 221px;
+    overflow: scroll;
+}
+.wrapper .pending ul .using{
+    margin-top: 10px;
+}
+
+.wrapper .pending ul::-webkit-scrollbar{
+    width: 0;
+}
+.todolist ul li{
+    overflow: hidden;
+    position: relative;
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    font-size: 17px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+    z-index: 1;
+}
+.todolist ul li .icons{
+    position: absolute;
+    right: -100px;
+    color: #fff;
+    width: 95px;
+    transition: all 0.5s ease;
+}
+.todolist ul li:hover .icons{
+    right: 0px;
+
+}
+.todolist ul li .icons i{
+    font-size: 25px;
+    line-height: 45px;
+    text-align: center;
+    width: 45px;
+    padding: 0 8px;
+    background-color: rgb(255, 14, 14);
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+.todolist ul li .icons i:hover{
+    opacity: 0.8;
+    transform: scale(0.96);
+}
+.todolist ul li .icons i:nth-child(1){
+    margin-right: 5px;
+    background-color: rgb(23, 212, 23);
+}
+
+.wrapper .footer{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.footer button{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #8e49e8;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px 10px;
+}
+.footer button:hover{
+    transform: scale(0.96);
+}
+
+
+.wrapper .count-text{
+    font-size: 16.5px;
+    font-weight: 600;
+    color: #333;
+}
+.wrapper .completed ul{
+    margin-top: 10px;
+    max-height: 170px;
+    overflow: scroll;
+}
+.wrapper .completed ul li{
+    word-wrap: wrap;
+}
+
+.wrapper .completed ul::-webkit-scrollbar{
+    width: 0;
+}
+.wrapper .completed .footer{
+    margin-top: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pending .complete .text{
+    text-decoration: line-through;
+}
+
+
+@media screen and (max-width: 1024px){
+    .wrapper{
+        max-width: 80%;
+        line-break: wrap;
+    }
+}
+@media screen and (max-width: 640px){
+    .wrapper{
+        max-width: 100%;
+        min-height: 80%;
+    }
+    .todolist ul li .icons{
+        position: absolute;
+        right: 0;
+    }
+}
+

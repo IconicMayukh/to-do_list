@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    
+    <div class="wrapper">
+        <header>To-Do list</header>
+
+        <div class="input-field">
+            <input type="text" placeholder="Add your new to-do">
+            <button><i class='bx bx-plus'></i></button>
+        </div>
+
+        <div class="todolist">
+            <div class="pending">
+                <h3>Your pending tasks:</h3>
+                <ul>
+                   <!-- input comes from the user input -->
+                </ul>
+
+                <div class="footer">
+                    <span class="count-text">You have no pending task</span>
+                    <button>Clear All</button>
+                </div>
+            </div>
+
+            <div class="completed">
+                <h3>Your completed tasks:</h3>
+                <span class="count-text span-completed">No tasks has been completed today!</span>
+                
+                <ul>
+                    <!-- adding this li's directly from the completed tasks -->
+                </ul>
+                
+                <div class="footer">
+                    <button>Clear All</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
