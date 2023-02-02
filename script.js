@@ -53,9 +53,15 @@ addBtn.onclick = ()=>{
 
 function completeTask(index2){
     document.querySelector(`.item${index2}`).classList.add("complete");
+    document.querySelectorAll('.bx').forEach((element) => {
+        element.classList.add("block");
+    });
     setTimeout(()=>{
         deleteTask(index2);
         addToCompleted(index2);
+        document.querySelectorAll('.bx').forEach((element) => {
+            element.classList.remove("block");
+        });
         // document.querySelectorAll('.bx-check')
     },700)
 }
